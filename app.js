@@ -3,6 +3,9 @@ const app = express();
 app.use(express.json());
 
 app.post('/credit-check', (req, res) => {
+    // Log the request body
+    console.log("Request received with body:", req.body);
+
     const { name, ssn, birthday, income } = req.body;
 
     // Here you can add logic to process the data and determine the credit score
